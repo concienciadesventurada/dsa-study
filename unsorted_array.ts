@@ -1,7 +1,11 @@
-const unsortedArray: number[] = [];
+const unsortedArray = (arrLengthMax: number): number[] => {
+  const arr = [];
 
-for (let i = 0; i < 10000; i++) {
-  unsortedArray.push(Math.floor(Math.random() * 10000));
+  for (let i = 0; i < arrLengthMax; i++) {
+    arr.push(Math.floor(Math.random() * arrLengthMax));
+  }
+
+  return arr;
 }
 
 export default unsortedArray;

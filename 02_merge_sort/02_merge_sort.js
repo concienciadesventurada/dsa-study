@@ -63,7 +63,8 @@ var merge = function (Arr, p, q, r) {
         k = k + 1;
     }
 };
-console.log("Unsorted array", unsorted_array_1.default);
+var unsortedArr = (0, unsorted_array_1.default)(20);
+console.log("Unsorted array", unsortedArr);
 var merge_sort = function (Arr, p, r) {
     if (p < r) {
         var q = Math.floor((p + r) / 2);
@@ -72,8 +73,8 @@ var merge_sort = function (Arr, p, r) {
         merge(Arr, p, q, r);
     }
 };
-merge_sort(unsorted_array_1.default, 0, unsorted_array_1.default.length - 1);
-console.log("Merge sorted array", unsorted_array_1.default);
+merge_sort(unsortedArr, 0, unsortedArr.length - 1);
+console.log("Merge sorted array", unsortedArr);
 // TODO: Exercises to think about as per GC's suggestions on Discord
 // 1.- Print the actual L and R arrays to see the division
 // 2.- Refactor properly to TS

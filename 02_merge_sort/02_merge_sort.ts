@@ -49,30 +49,32 @@ const merge = (Arr: number[], p: number, q: number, r: number) => {
   while (i < nL && j < nR) {
     if (L[i] <= R[j]) {
       Arr[k] = L[i];
-      i = i + 1;
+      i++;
     } else {
       Arr[k] = R[j];
-      j = j + 1;
+      j++;
     }
-    k = k + 1;
+    k++;
   }
 
   // Having gone through one of L and R entirely, copy the remainder of the
   // other to the end of A[p:r]
   while (i < nL) {
     Arr[k] = L[i];
-    i = i + 1;
-    k = k + 1;
+    i++;
+    k++;
   }
 
   while (j < nR) {
     Arr[k] = R[j];
-    j = j + 1;
-    k = k + 1;
+    j++;
+    k++;
   }
 };
 
-console.log("Unsorted array", unsortedArray);
+const unsortedArr = unsortedArray(20);
+
+console.log("Unsorted array", unsortedArr);
 
 const merge_sort = (Arr: number[], p: number, r: number) => {
   if (p < r) {
@@ -83,9 +85,9 @@ const merge_sort = (Arr: number[], p: number, r: number) => {
   }
 };
 
-merge_sort(unsortedArray, 0, unsortedArray.length - 1);
+merge_sort(unsortedArr, 0, unsortedArr.length - 1);
 
-console.log("Merge sorted array", unsortedArray);
+console.log("Merge sorted array", unsortedArr);
 
 // TODO: Exercises to think about as per GC's suggestions on Discord
 // 1.- Print the actual L and R arrays to see the division
