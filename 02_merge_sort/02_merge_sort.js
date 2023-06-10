@@ -42,25 +42,25 @@ var merge = function (Arr, p, q, r) {
     while (i < nL && j < nR) {
         if (L[i] <= R[j]) {
             Arr[k] = L[i];
-            i = i + 1;
+            i++;
         }
         else {
             Arr[k] = R[j];
-            j = j + 1;
+            j++;
         }
-        k = k + 1;
+        k++;
     }
     // Having gone through one of L and R entirely, copy the remainder of the
     // other to the end of A[p:r]
     while (i < nL) {
         Arr[k] = L[i];
-        i = i + 1;
-        k = k + 1;
+        i++;
+        k++;
     }
     while (j < nR) {
         Arr[k] = R[j];
-        j = j + 1;
-        k = k + 1;
+        j++;
+        k++;
     }
 };
 var unsortedArr = (0, unsorted_array_1.default)(20);

@@ -55,3 +55,11 @@ console.log(merge_sort(arr))
 // TASK: Exercises to think about as per GC's suggestions on Discord
 // CHECK: 2.- Refactor properly to TS
 // CHECK: 3.- Think in useful and descriptive names to p, q and r // CHECK:
+
+// INFO:
+// AVG TIME COMPLEXITY => O(n log(n))
+// WORST TIME COMPLEXITY => O(n log(n))
+// BEST CASE TIME COMPLEXITY => O(n log(n))
+
+// However, in its non-optimized version relies on creating a lot of arrays
+// being the following way => O(n) + O(log n) so... O(n)

@@ -17,7 +17,7 @@ for (var i = 1; i < unsortedArr.length; i++) {
         unsortedArr[j + 1] = unsortedArr[j];
         // Then substract 1 to the index and check again if this element is greater
         // Note that if j = 0, then j = -1 breaking the loop, we got to the start
-        j = j - 1;
+        j--;
     }
     // Note that when we exit the while loop two things have happened:
     //    1. Either all the elements to the left of the key are smaller
@@ -28,8 +28,9 @@ for (var i = 1; i < unsortedArr.length; i++) {
 }
 // The loop adds 1 to i and continues with the unsorted subarray, A[i+1:n]
 console.log("Sorted Array", unsortedArr);
+// INFO:
 // AVG TIME COMPLEXITY => O(n^2)
-// WORST TIME COMPLEXITY => O(n^2)
+// WORST CASE TIME COMPLEXITY => O(n^2)
 // BEST CASE => O(n)
 // Because we have two loops, one inside the other and each loop iterates
 // through, potentially, every element of the array in regular steps, in this

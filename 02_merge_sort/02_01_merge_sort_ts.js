@@ -1,13 +1,4 @@
 "use strict";
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var unsorted_array_1 = require("../unsorted_array");
 var merge = function (left, right) {
@@ -28,17 +19,17 @@ var merge = function (left, right) {
         }
     }
     // Once every element has been sorted, push both remainders if any to the arr
-    //while (i < left.length) {
-    //  arr.push(left[i]);
-    //  i++;
-    //}
-    //while (j < right.length) {
-    //  arr.push(right[j]);
-    //  j++;
-    //}
+    while (i < left.length) {
+        arr.push(left[i]);
+        i++;
+    }
+    while (j < right.length) {
+        arr.push(right[j]);
+        j++;
+    }
     // NOTE: Another possible return instead of the previous while loops is
-    return __spreadArray(__spreadArray(__spreadArray([], arr, true), left.slice(i), true), right.slice(j), true);
-    //return arr;
+    // return [...arr, ...left.slice(i), ...right.slice(j)];
+    return arr;
 };
 var merge_sort = function (arr) {
     if (arr.length <= 1)
@@ -56,3 +47,9 @@ console.log(merge_sort(arr));
 // TASK: Exercises to think about as per GC's suggestions on Discord
 // CHECK: 2.- Refactor properly to TS
 // CHECK: 3.- Think in useful and descriptive names to p, q and r // CHECK:
+// INFO:
+// AVG TIME COMPLEXITY => O(n log(n))
+// WORST TIME COMPLEXITY => O(n log(n))
+// BEST CASE TIME COMPLEXITY => O(n log(n))
+// However, in its non-optimized version relies on creating a lot of arrays
+// being the following way => O(n) + O(log n) so... O(n)

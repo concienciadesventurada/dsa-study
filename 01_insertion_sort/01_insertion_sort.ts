@@ -32,8 +32,9 @@ for (let i = 1; i < unsortedArr.length; i++) {
 
 console.log("Sorted Array", unsortedArr);
 
+// INFO:
 // AVG TIME COMPLEXITY => O(n^2)
-// WORST TIME COMPLEXITY => O(n^2)
+// WORST CASE TIME COMPLEXITY => O(n^2)
 // BEST CASE => O(n)
 
 // Because we have two loops, one inside the other and each loop iterates
