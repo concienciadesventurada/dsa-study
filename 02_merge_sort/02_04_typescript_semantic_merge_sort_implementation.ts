@@ -4,6 +4,8 @@ const arr = unsortedArray(10000);
 
 const merge = (l: number[], r: number[]): number[] => {
   let arr: number[] = [];
+  // This also would be a more accurate and safe implementation
+  // let arr = Array<number>(l.length + r.length);
   let i = 0, j = 0;
 
   while (i < l.length && j < r.length) {
