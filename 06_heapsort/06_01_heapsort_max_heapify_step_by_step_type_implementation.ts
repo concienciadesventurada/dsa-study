@@ -83,10 +83,10 @@ type Heap = {
 };
 
 const leftNode = (i: number): number => {
-  return 2 * i;
+  return 2 * i + 1;
 };
 const rightNode = (i: number): number => {
-  return 2 * i + 1;
+  return 2 * i + 2;
 };
 const parentNode = (i: number): number => {
   return Math.floor(i / 2);
@@ -106,13 +106,13 @@ const max_heapify = (arr: Heap, i: number) => {
 
   // Is the index of the element on my left <= the current length?
   // If it is, is it greater than ME?
-  if (l <= arr.heapSize && arr[l] > arr[i]) {
+  if (l < arr.heapSize && arr[l] > arr[i]) {
     largest = l;
   } else {
     largest = i;
   }
 
-  if (r <= arr.heapSize && arr[r] > arr[largest]) {
+  if (r < arr.heapSize && arr[r] > arr[largest]) {
     largest = r;
   }
 
@@ -121,15 +121,9 @@ const max_heapify = (arr: Heap, i: number) => {
   if (largest !== i) {
     const temp = arr[i];
 
-    // This is the element I'll be moving
-    console.log(temp);
-
     // Exchange
     arr[i] = arr[largest];
     arr[largest] = temp;
-
-    // Just to check out the movement!
-    console.log(arr);
 
     // See ya' until I'm in place, mate!
     max_heapify(arr, largest);

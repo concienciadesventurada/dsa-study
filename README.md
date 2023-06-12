@@ -46,6 +46,9 @@ who learn in a rather heterodox manner.
 
 - [**Big O**](https://big-o.io/): A great general overview in different languages
 the computing complexity of some of the most known sorting algorithms
+- [**TheAlgorithms/TypeScript repo**](https://github.com/TheAlgorithms/TypeScript): An
+absolutely awesome resource that apply in a pedagogical manner these dense and complex
+topics.
 
 ### Insertion sort
 
@@ -65,3 +68,26 @@ lot harder to grasp, however, eventually makes... kinda sense? I swear it's not 
 - [**Recursividad | FÁCIL de entender y visualizar | Recursión**](https://www.youtube.com/watch?v=YwRjEOFxvO0)
 - [**Javascript Freecodecamp Algorithm #34: Implement Merge Sort**](https://www.youtube.com/watch?v=x_Z9FcAPmbk)
 - [**Insertion Sort in Big-O.io**](https://big-o.io/algorithms/comparison/merge-sort/)
+
+## Heapsort
+
+This sorting algorithm comes along with honorary mentions of the actual heap
+data structure, although not the full explanation nor implementation. I kinda
+got the idea behind heapify and the procedure, however, after some guidance
+with very knowledgeable people that were kind enough to help me, I've steered
+away from keep banging my head around them since relies so much in things as,
+at least, a good foundation on binary trees and its related DSs.
+
+- [**HeapSort implementation in JS**](https://stackoverflow.com/questions/65644699/heapsort-implementation-in-javascript)
+- [**7.9 Heap Sort | Heapify Method | Build Max Heap Algorithm | Sorting Algorithms**](https://www.youtube.com/watch?v=Q_eia3jC9Ts&t=242s)
+- [**7.8 Max Heap Insertion and Deletion | Heap Tree Insertion and Deletion with example| Data Structure**](https://www.youtube.com/watch?v=NEtwJASLU8Q)
+
+### Stack
+
+The first data structure shown if you don't count arrays or matrices. Since its
+an array with an strict policy on how elements are to be inserted and deleted with
+a LIFO policy, its kinda straightforward. The structure here comes almost one-to-one
+from the TypeScript repo from TheAlgorithms linked previously for its clarity, minus my comments to
+make it even clearer to me at least.
+
+- [**3.2 Implementation of Stack using Array | Data Structure and Algorithm Tutorials**](https://www.youtube.com/watch?v=VmsTAVpz0xo)
