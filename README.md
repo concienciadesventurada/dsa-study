@@ -69,7 +69,7 @@ lot harder to grasp, however, eventually makes... kinda sense? I swear it's not 
 - [**Javascript Freecodecamp Algorithm #34: Implement Merge Sort**](https://www.youtube.com/watch?v=x_Z9FcAPmbk)
 - [**Insertion Sort in Big-O.io**](https://big-o.io/algorithms/comparison/merge-sort/)
 
-## Heapsort
+### Heapsort
 
 This sorting algorithm comes along with honorary mentions of the actual heap
 data structure, although not the full explanation nor implementation. I kinda
